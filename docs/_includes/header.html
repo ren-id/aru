@@ -1,0 +1,37 @@
+<div class="header">
+    <div class="header-container">
+        <div class="header-child">
+            <div class="profile-container">
+                <div class="profile-picture-container">
+                    <a href="https://ren.my.id">
+                        <img class="profile-picture" src="https://ren.my.id/files/profile.svg" title="Profile"
+                            alt="profile picture" />
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="menu">
+            <div class="header-menu">
+                <a href="{{site.url}}/privacy">Privasi</a><a href="{{site.url}}/contact">Kontak</a><a href="{{site.url}}/stories.html">Kisah</a><a href="{{site.url}}/about">Tentang</a>
+            </div>
+        </div>
+
+        <div class="header-child">
+            <div class="search-container">
+                <div class="search-box">
+                    <div class="search-input-container">
+                        <input type="text" id="search-input" placeholder="Cari" autocomplete="off">
+                    </div>
+                </div>
+                <div id="search-results">
+                    <ul id="results-container"></ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script> var map = {}; onkeydown = onkeyup = function (e) { e = e || event; map[e.keyCode] = e.type == "keydown"; if (map["191"] == true) { e.preventDefault(); var elm = document.getElementById("search-input"); elm.focus(); } if (map["27"] == true) { e.preventDefault(); var elm = document.getElementById("search-input"); elm.blur(); } };</script>
+<script src="{{site.url}}/files/search-script.js" type="text/javascript"></script>
+<script> SimpleJekyllSearch({ searchInput: document.getElementById("search-input"), resultsContainer: document.getElementById("results-container"), searchResultTemplate: '<a href="{url}"><li>{title}</li></a>', noResultsText: "<li><p>No results found!</p></li>", limit: 20, json: "{{site.url}}/search.json" });</script>
