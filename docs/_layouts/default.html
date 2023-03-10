@@ -1,10 +1,19 @@
 {% include head.html %}
+
 {% include header.html %}
-<div class="badan">
-<section>
-{{ content }}
-</section>
+
+<main>
+    <section class="py-5 text-center container">
+        <div class="row py-lg-5">
+            <div class="col-lg-6 col-md-8 mx-auto">
+                {{ content }}
+                <div class="informasi">Published on {{ page.date }}</div>
+            </div>
+        </div>
+    </section>
+</main>
+
 {% include footer.html %}
-</div>
 </body>
+
 </html>
